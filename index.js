@@ -8,7 +8,7 @@ const parser = optparser([
 ]);
 
 module.exports = (opt = {}) => {
-  const options = parse(opt);
+  const options = parser(opt);
 
   const DURATION = (24 * 60 * 60 * 1000).toString(); // 1 day
 
