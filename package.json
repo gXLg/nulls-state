@@ -1,0 +1,30 @@
+{
+  "name": "nulls-state",
+  "version": "1.0.0",
+  "description": "Express middleware for state encoding in nulls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gXLg/nulls-state.git"
+  },
+  "keywords": [
+    "nulls",
+    "express",
+    "middleware",
+    "state",
+    "session"
+  ],
+  "author": "gXLg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gXLg/nulls-state/issues"
+  },
+  "homepage": "https://github.com/gXLg/nulls-state#readme",
+  "dependencies": {
+    "gxlg-utils": "^1.4.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
