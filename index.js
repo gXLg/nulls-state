@@ -12,7 +12,7 @@ module.exports = (opt = {}) => {
 
   const DURATION = (24 * 60 * 60 * 1000).toString(); // 1 day
 
-  return (req, res) => {
+  const plugin = (req, res) => {
     const cookie = req.cookies[options.cookie];
     let s = {};
     try {
@@ -50,6 +50,14 @@ module.exports = (opt = {}) => {
         "secure": options.secure
       };
       res.cookie(options.cookie, token, opt);
+    };
+  };
+
+  return options => {
+    const prev = options.hook;
+    options.hook = async (req, res) => {
+      plugin(req, res);
+      await prev(req, res);
     };
   };
 };

@@ -1,2 +1,2 @@
 # nulls-state
-Express middleware for state encoding in nulls
+Nulls plugin for state encoding
