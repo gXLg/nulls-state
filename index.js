@@ -59,5 +59,13 @@ module.exports = (opt = {}) => {
       plugin(req, res);
       await prev(req, res);
     };
+
+    if ("^" in options.srcProviders) {
+      console.warn("Can't initialize the shorthand state provider: It overwrites an already existing provider.");
+    } else {
+      options.srcProviders["^"] = v => {
+        return r => r.popState(v) ?? "";
+      };
+    }
   };
 };
